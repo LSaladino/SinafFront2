@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+    <button mat-icon-button routerLink="main">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span>Vital Latina</span>
+    <span class="align-midle"></span>
+  
+    <!-- matMenu is key word -->
+    <button mat-button [matMenuTriggerFor]="CadastroNivel1">Cadastro</button>
+    <mat-menu #CadastroNivel1="matMenu">
+      <button mat-menu-item routerLink="meio-pagamento">Meios de Pagemento</button>
+      <button mat-menu-item routerLink="boleto">Boletos</button>
+      <button mat-menu-item routerLink="pix">Pix</button>
+    </mat-menu>
+    <!-- matMenu is key word -->
+  
+     <!-- matMenu is key word -->
+    <button mat-button [matMenuTriggerFor]="tabela">Financeiro</button>
+    <mat-menu #tabela="matMenu">
+      <button mat-menu-item routerLink="table-meio-pagamento">Processar</button>
+      <button mat-menu-item routerLink="table-pix">Pix</button>
+      <button mat-menu-item routerLink="selecao">Seleção</button>
+    </mat-menu>
+     <!-- matMenu is key word -->
+  
+    <button mat-button>Relatorios</button>
+   
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="main">Início</button>
+    <button mat-button>Sobre</button>
+    <button mat-button>Contato</button>
+  </mat-toolbar>
